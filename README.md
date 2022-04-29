@@ -1,4 +1,4 @@
-## FoodiesHub
+## FoodieHub
 
 This is a react-native app:
 

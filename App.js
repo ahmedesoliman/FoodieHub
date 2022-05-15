@@ -1,16 +1,18 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import ListScreen from './src/screens/ListScreen';
 import LoginScreen from './src/screens/LoginScreen';
+import ListScreen from "./src/screens/ListScreen";
+import DetailScreen from "./src/screens/DetailScreen";
 
 
 const navigator = createStackNavigator(
   {
-    login: LoginScreen,
-    list:ListScreen
+    Login: LoginScreen,
+    List: ListScreen,
+    Detail: DetailScreen
   },
   {
-    initialRouteName: 'login',
+    initialRouteName: 'List',
     defaultNavigationOptions: {
       title: 'StreetFood'
     }

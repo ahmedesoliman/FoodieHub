@@ -73,3 +73,7 @@ const styles = StyleSheet.create({
 });
 
 export default ForgetPassword;
+
+
+// reference 
+// https://stackoverflow.com/questions/54515444/how-to-reset-firebase-auth-password-in-react-native

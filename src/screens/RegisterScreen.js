@@ -13,30 +13,6 @@ const Register = ({navigation}) => {
     const [confirmPassword, setComfirmPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    // const handleDisplayNameInput = e => {
-    //     setDisplayName(e.target.value);
-    // }
-
-    // const handleEmailInput = e => {
-    //     setEmail(e.target.value);
-    // }
-
-    // const handlePasswordInput = e => {
-    //     setPassword(e.target.value);
-    // }
-
-    // const handleConfirmPasswordInput = e => {
-    //     setComfirmPassword(e.target.value)
-    // }
-
-    // const handleDateofBirthInput = e => {
-    //     setDOB(e.target.value)
-    // }
-
-    // const handleUserNameInput = e => {
-    //     setUserName(e.target.value)
-    // }
-
 
 const registerUser = () => {
     if(email === '' && password === '') {

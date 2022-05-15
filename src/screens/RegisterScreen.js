@@ -33,7 +33,12 @@ const registerUser = () => {
         setIsLoading(false);
         navigation.navigate('login')
       })
-      .catch(error => console.log(error))      
+      .catch(error => {
+        console.log(error)
+        setIsLoading(false);
+        Alert.alert("make sure to put the right information")
+        navigation.navigate('register')
+      })      
     }
   }
   if(isLoading){

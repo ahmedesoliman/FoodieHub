@@ -10,12 +10,15 @@ import MapScreen from "./src/screens/MapScreen";
 import AccountScreen from "./src/screens/AccountScreen";
 
 const switchNavigator = createSwitchNavigator({
-  loginFLow: createSwitchNavigator({
-    Login: LoginScreen,
-    Register: RegisterScreen,
-  }),
+  loginFLow: createSwitchNavigator(
+    {
+      Register: RegisterScreen,
+      Login: LoginScreen,
+    },
+    { initialRouteName: 'Login' }
+  ),
   mainFlow: createBottomTabNavigator({
-    trackListFlow: createStackNavigator({
+    Home: createStackNavigator({
       List: ListScreen,
       Detail: DetailScreen
     }),

@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
         padding: 10
     },
     ratingGraph: {
-        color: '#e10000',
+        // color: '#e10000',
+        color: '#f6b842',
     },
     remainGraph: {
         color: '#B1B1B1',

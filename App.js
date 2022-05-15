@@ -12,7 +12,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: 'login',
     defaultNavigationOptions: {
-      title: 'FoodiesHub'
+      title: 'StreetFood'
     }
   }
 );

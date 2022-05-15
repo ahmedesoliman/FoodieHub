@@ -37,15 +37,20 @@ const LoginScreen = ({navigation}) => {
             onChangeText={(password) => setPassword(password)}
             />
         </View>
-    
-        <TouchableOpacity>
-            <Text style={styles.forgot_button}>Forgot Password?</Text>
+        
+        <View style={{flexDirection:"row", justifyContent: "space-evenly"}}>
+        <TouchableOpacity style={styles.forgot_button}>
+            <Text >Forgot Password?     </Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.new_user}>
+            <Text >New User?</Text>
+        </TouchableOpacity>
+        </View>
+
 
         <Button
         onPress={() => navigation.navigate("list") }
         title="Login"
-        
         color="#e6cd7e"
         />
         </View>
@@ -90,7 +95,12 @@ const styles = StyleSheet.create({
    
     forgot_button: {
       height: 30,
-      marginBottom: 20,
+      marginBottom: 10,
+    },
+
+    new_user: {
+      height: 30,
+      marginBottom: 10,
     },
    
     loginBtn: {

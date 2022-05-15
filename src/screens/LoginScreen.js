@@ -34,8 +34,11 @@ const LoginScreen = ({navigation}) => {
           setIsLoading(false)
           navigation.navigate('list')
         })
-        .catch(error => {console.log(error)
-        navigation.navigate('list')
+        .catch(error => {
+          console.log(error)
+          setIsLoading(false)
+        Alert.alert("wrong email or password")
+        navigation.navigate('login')
         })
       }
     }

@@ -26,7 +26,7 @@ This is a react-native app:
 - run `npm install`
 
 **Extra Setup**
-If the project isn't able to run after `npm install`, run the code as follow:
+<br />If the project isn't able to run after `npm install`, run the code as follow:
 
 - run `npm install react-navigation --legacy-peer-deps`
 - run `expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view`

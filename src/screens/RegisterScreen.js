@@ -36,8 +36,8 @@ const registerUser = () => {
       .catch(error => {
         console.log(error)
         setIsLoading(false);
-        Alert.alert("make sure to put the right information")
-        navigation.navigate('register')
+        Alert.alert("make sure to put the right information");
+        navigation.navigate('register');
       })      
     }
   }

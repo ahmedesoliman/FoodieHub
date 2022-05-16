@@ -13,12 +13,11 @@ const resetPassword = ({navigation}) => {
     } else {
       setIsLoading(true)
       firebase.auth().sendPasswordResetEmail(email)
-      .then((res) => {
-        console.log(res)
+      .then(() => {
         setEmail("");
-        setIsLoading(false);
         Alert.alert("reset email sent to " + email)
-        navigation.navigate("login")
+        setIsLoading(false);
+        navigation.navigate('login')
       })
       .catch(error => console.log(error))      
     }

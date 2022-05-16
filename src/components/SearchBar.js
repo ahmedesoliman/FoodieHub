@@ -7,7 +7,7 @@ const SearchBar = ({ term, onTermChange }) => {
     return (
         <View style={styles.container}>
             <View style={styles.backgroundStyle}>
-                <Feather name='search' style={styles.iconStyle} />
+                {/* <Feather name='search' style={styles.iconStyle} /> */}
                 <TextInput
                     autoCapitalize='none'
                     autoCorrect={false}

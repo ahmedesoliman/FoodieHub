@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
 import ResultDetail from '../components/ResultDetail';
 import SearchBar from '../components/SearchBar';
+import { Dimensions } from 'react-native';
 
 const ListScreen = ({ navigation }) => {
 
@@ -38,15 +38,31 @@ const ListScreen = ({ navigation }) => {
     )
 };
 
+ListScreen.navigationOptions = ({ navigation }) => {
+    return {
+        headerLeft: () => (
+            <TouchableOpacity style={styles.logOutSection} onPress={() => navigation.navigate("Login")}>
+                <Text style={styles.logOutText}>LogOut</Text>
+            </TouchableOpacity>
+        ),
+    };
+}
+
 const styles = StyleSheet.create({
     background: {
-        // backgroundColor: 'white',
         height: 3000,
         flex: 1
     },
     flatList: {
         marginTop: 0,
+    },
+    logOutSection: {
+        marginLeft: Dimensions.get("window").width * 0.04,
+    },
+    logOutText: {
+        fontSize: 16,
+        color: '#f6b842'
     }
 });
 
-export default withNavigation(ListScreen);
+export default ListScreen;

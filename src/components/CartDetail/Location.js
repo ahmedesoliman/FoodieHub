@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 const Location = ({ result, subtitleStyle }) => {
 
@@ -22,14 +23,8 @@ const Location = ({ result, subtitleStyle }) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
-        paddingVertical: 10
+        padding: Dimensions.get("window").width * 0.027
     },
-    menuImage: {
-        width: 260,
-        height: 400,
-        borderRadius: 4,
-        marginLeft: 5
-    }
 });
 
 export default Location;

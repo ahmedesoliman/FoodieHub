@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 const Introduction = ({ result }) => {
 
@@ -75,8 +76,8 @@ const styles = StyleSheet.create({
     },
     introduction: {
         backgroundColor: '#FFFFFF',
-        width: 380,
-        padding: 10
+        width: Dimensions.get("window").width,
+        padding: Dimensions.get("window").width * 0.027
     },
     ratingGraph: {
         // color: '#e10000',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { Dimensions } from 'react-native';
 
 const Info = ({ result, subtitleStyle }) => {
 
@@ -19,8 +20,7 @@ const Info = ({ result, subtitleStyle }) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
-        paddingVertical: 10,
-        paddingLeft: 5
+        padding: Dimensions.get("window").width * 0.027
     },
     menuImage: {
         width: 260,

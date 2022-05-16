@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
+import { View, Text, Image, StyleSheet, FlatList, ScrollView } from 'react-native';
+import { Dimensions } from 'react-native';
 
 const Menu = ({ result, subtitleStyle }) => {
 
@@ -8,16 +9,7 @@ const Menu = ({ result, subtitleStyle }) => {
             <View>
                 <Text style={subtitleStyle}>Menu</Text>
                 <View style={styles.container}>
-                    <FlatList
-                        style={styles.flatlist}
-                        showsHorizontalScrollIndicator={false}
-                        horizontal={true}
-                        data={result.menu}
-                        keyExtractor={(photo) => photo}
-                        renderItem={({ item }) => {
-                            return <Image style={styles.menuImage} source={{ uri: item }} />
-                        }}
-                    />
+                    <Image style={styles.menuImage} source={{ uri: result.menu[0] }} />
                 </View>
             </View>
         )
@@ -30,11 +22,11 @@ const Menu = ({ result, subtitleStyle }) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
-        paddingVertical: 10
+        padding: 10,
     },
     menuImage: {
-        width: 260,
-        height: 400,
+        resizeMode: 'stretch',
+        height: 300,
         borderRadius: 4,
         marginLeft: 5
     }

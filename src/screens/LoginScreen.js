@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Alert, Image } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Alert, Image, ActivityIndicator } from 'react-native';
+
+import firebase from '../../database/firebase';
 
 var logo = require('../../assets/images/StreetFood.png');
 
@@ -8,12 +10,45 @@ var logo = require('../../assets/images/StreetFood.png');
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   // const showAlert = () => {            //To test the button working
   //   Alert.alert(
   //     "you need to .." 
   //   )
   // };
+
+  const userLogin = () => {
+    if (email === '' && password === '') {
+      Alert.alert('Enter details to signin!')
+    } else {
+      setIsLoading(true)
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((res) => {
+          console.log(res)
+          console.log('User logged-in successfully!')
+          setEmail("")
+          setPassword("")
+          setIsLoading(false)
+          navigation.navigate('list')
+        })
+        .catch(error => {
+          console.log(error)
+          setIsLoading(false)
+          Alert.alert("wrong email or password")
+          navigation.navigate('login')
+        })
+    }
+  }
+  if (isLoading) {
+    return (
+      <View style={styles.preloader}>
+        <ActivityIndicator size="large" color="#9E9E9E" />
+      </View>
+    )
+  }
 
   return (
     <View style={styles.container}>
@@ -39,23 +74,21 @@ const LoginScreen = ({ navigation }) => {
       </View>
 
       <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-        <TouchableOpacity style={styles.forgot_button}>
+        <TouchableOpacity style={styles.forgot_button} onPress={() => navigation.navigate("forgot_password")}>
           <Text >Forgot Password?     </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.new_user}>
+        </TouchableOpacity >
+        <TouchableOpacity style={styles.new_user} onPress={() => navigation.navigate("register")}>
           <Text >New User?</Text>
         </TouchableOpacity>
       </View>
 
 
       <Button
-        onPress={() => navigation.navigate("List")}
+        onPress={userLogin}
         title="Login"
         color="#e6cd7e"
       />
     </View>
-
-
   );
 }
 

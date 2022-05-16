@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
         resizeMode: 'stretch',
         height: 300,
         borderRadius: 4,
-        marginLeft: 5
     }
 });
 

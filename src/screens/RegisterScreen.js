@@ -1,7 +1,7 @@
 // components/signup.js
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, TouchableOpacity } from 'react-native';
-import firebase from '../../database/firebase';
+import firebase from '../database/firebase';
 
 const Register = ({ navigation }) => {
 
@@ -31,13 +31,13 @@ const Register = ({ navigation }) => {
           setComfirmPassword("");
           setUserName("");
           setIsLoading(false);
-          navigation.navigate('login')
+          navigation.navigate('Login')
         })
         .catch(error => {
           console.log(error)
           setIsLoading(false);
           Alert.alert("make sure to put the right information");
-          navigation.navigate('register');
+          navigation.navigate('Register');
         })
     }
   }
@@ -97,7 +97,7 @@ const Register = ({ navigation }) => {
       />
       < TouchableOpacity
         style={styles.loginText}
-        onPress={() => navigation.navigate('login')}>
+        onPress={() => navigation.navigate('Login')}>
         <Text>Already Registered? Click here to login </Text>
       </TouchableOpacity>
     </View>

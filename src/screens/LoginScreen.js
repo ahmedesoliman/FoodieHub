@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, Alert, Image, ActivityIndicator } from 'react-native';
 
-import firebase from '../../database/firebase';
+import firebase from '../database/firebase';
 
 var logo = require('../../assets/images/StreetFood.png');
 
@@ -32,13 +32,13 @@ const LoginScreen = ({ navigation }) => {
           setEmail("")
           setPassword("")
           setIsLoading(false)
-          navigation.navigate('list')
+          navigation.navigate('List')
         })
         .catch(error => {
           console.log(error)
           setIsLoading(false)
           Alert.alert("wrong email or password")
-          navigation.navigate('login')
+          navigation.navigate('Login')
         })
     }
   }
@@ -74,10 +74,10 @@ const LoginScreen = ({ navigation }) => {
       </View>
 
       <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-        <TouchableOpacity style={styles.forgot_button} onPress={() => navigation.navigate("forgot_password")}>
+        <TouchableOpacity style={styles.forgot_button} onPress={() => navigation.navigate("ForgetPassword")}>
           <Text >Forgot Password?     </Text>
         </TouchableOpacity >
-        <TouchableOpacity style={styles.new_user} onPress={() => navigation.navigate("register")}>
+        <TouchableOpacity style={styles.new_user} onPress={() => navigation.navigate("Register")}>
           <Text >New User?</Text>
         </TouchableOpacity>
       </View>

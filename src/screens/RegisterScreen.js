@@ -1,107 +1,107 @@
 // components/signup.js
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator , TouchableOpacity} from 'react-native';
-import firebase from '../../database/firebase';
+import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, TouchableOpacity } from 'react-native';
+import firebase from '../database/firebase';
 
-const Register = ({navigation}) => {
-  
-    const [displayName, setDisplayName] = useState("");
-    const [userName, setUserName] = useState("");
-    const [dateofBirth, setDOB] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setComfirmPassword] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
+const Register = ({ navigation }) => {
+
+  const [displayName, setDisplayName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [dateofBirth, setDOB] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setComfirmPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
 
-const registerUser = () => {
-    if(email === '' && password === '') {
+  const registerUser = () => {
+    if (email === '' && password === '') {
       Alert.alert('Enter details to signup!')
     } else {
       setIsLoading(true)
-      firebase.auth().createUserWithEmailAndPassword(email,password)
-      .then((res) => {
-        res.user.updateProfile(
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((res) => {
+          res.user.updateProfile(
             (displayName) => setDisplayName(displayName))
-        console.log('User registered successfully!')
-        setDisplayName("");
-        setEmail("");
-        setPassword("");
-        setDOB("");
-        setComfirmPassword("");
-        setUserName("");
-        setIsLoading(false);
-        navigation.navigate('login')
-      })
-      .catch(error => {
-        console.log(error)
-        setIsLoading(false);
-        Alert.alert("make sure to put the right information");
-        navigation.navigate('register');
-      })      
+          console.log('User registered successfully!')
+          setDisplayName("");
+          setEmail("");
+          setPassword("");
+          setDOB("");
+          setComfirmPassword("");
+          setUserName("");
+          setIsLoading(false);
+          navigation.navigate('Login')
+        })
+        .catch(error => {
+          console.log(error)
+          setIsLoading(false);
+          Alert.alert("make sure to put the right information");
+          navigation.navigate('Register');
+        })
     }
   }
-  if(isLoading){
-      return(
-        <View style={styles.preloader}>
-          <ActivityIndicator size="large" color="#9E9E9E"/>
-        </View>
-      )
-    }    
+  if (isLoading) {
     return (
-      <View style={styles.container}>  
-      <TextInput
-          style={styles.inputStyle}
-          placeholder="Email"
-          value={email}
-          onChangeText={(email) => setEmail(email)}
-        />
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Full Name"
-          value={displayName}
-          onChangeText={(displayName) => setDisplayName(displayName)}
-        />    
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Date of Birth (mm-dd-yyyy)"
-          value={dateofBirth}
-          onChangeText={(dateofBirth) => setDOB(dateofBirth)}
-        />
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="UserName"
-          value={userName}
-          onChangeText={(userName) => setUserName(userName)}
-        />
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Password"
-          value={password}
-          onChangeText={(password) => setPassword(password)}
-          maxLength={15}
-          secureTextEntry={true}
-        />
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Retype Password"
-          value={confirmPassword}
-          onChangeText={(confirmPassword) => setComfirmPassword(confirmPassword)}
-          maxLength={15}
-          secureTextEntry={true}
-        />     
-        <Button
-          color="#ebc034"
-          title="Register"
-          onPress={registerUser}
-        />
-        < TouchableOpacity
-          style={styles.loginText}
-          onPress={() => navigation.navigate('login')}>
-          <Text>Already Registered? Click here to login </Text>
-        </TouchableOpacity>                          
+      <View style={styles.preloader}>
+        <ActivityIndicator size="large" color="#9E9E9E" />
       </View>
-    );
+    )
+  }
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="Email"
+        value={email}
+        onChangeText={(email) => setEmail(email)}
+      />
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="Full Name"
+        value={displayName}
+        onChangeText={(displayName) => setDisplayName(displayName)}
+      />
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="Date of Birth (mm-dd-yyyy)"
+        value={dateofBirth}
+        onChangeText={(dateofBirth) => setDOB(dateofBirth)}
+      />
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="UserName"
+        value={userName}
+        onChangeText={(userName) => setUserName(userName)}
+      />
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="Password"
+        value={password}
+        onChangeText={(password) => setPassword(password)}
+        maxLength={15}
+        secureTextEntry={true}
+      />
+      <TextInput
+        style={styles.inputStyle}
+        placeholder="Retype Password"
+        value={confirmPassword}
+        onChangeText={(confirmPassword) => setComfirmPassword(confirmPassword)}
+        maxLength={15}
+        secureTextEntry={true}
+      />
+      <Button
+        color="#ebc034"
+        title="Register"
+        onPress={registerUser}
+      />
+      < TouchableOpacity
+        style={styles.loginText}
+        onPress={() => navigation.navigate('Login')}>
+        <Text>Already Registered? Click here to login </Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
 
 

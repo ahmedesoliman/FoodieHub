@@ -1,0 +1,164 @@
+[
+  {
+    "id": "cartname_permit1",
+    "cart_name": "Halal Indian Food and Gyro Truck",
+    "owner_name": "Md. Maruf Hossain",
+    "permit": "xxx-a79-y6u",
+    "image_url": "https://cdn2.localdatacdn.com/ny/new-york/5947279/original/uGw8s1LsS2.jpg",
+    "photos": [
+      "https://nazshalal.com/levittown/wp-content/uploads/sites/3/2018/12/Nazs-Halal-Food-1007184590_com_or_fw600.jpg",
+      "https://nazshalal.com/levittown/wp-content/uploads/sites/3/2018/12/Nazs-Halal_-79_for_600fw.jpg",
+      "https://nazshalal.com/levittown/wp-content/uploads/sites/3/2019/01/Nazs-Halal-Food-1007184563_fishover_600fw_60.jpg"
+    ],
+    "menu": [
+      "https://image.zmenu.com/menupic/2800887/6bf57ca0-e7fc-4fa9-8154-bbe5b7206eef.jpg"
+    ],
+    "social": {
+      "website": "https://restaurantguru.com/Halal-Indian-Food-and-Gyro-Truck-New-York-2",
+      "instagram": "",
+      "facebook": "",
+      "yelp": ""
+    },
+    "coordinates": {
+      "latitude": 40.714300,
+      "longitude": -74.011590
+    },
+    "location": {
+      "city": "New York",
+      "country": "US",
+      "address": "240 Greenwich st.",
+      "state": "NY",
+      "zip_code": "10007"
+    },
+    "rating": 4.1,
+    "review_count": 2300,
+    "price": "$",
+    "categories": [
+      "Indian",
+      "Halal"
+    ],
+    "email": "marufhossain@gmail.com",
+    "phone": "+13472412987"
+  },
+  {
+    "id": "cartname_permit2",
+    "cart_name": "The Fat Shallot",
+    "owner_name": "Mr. Mike ",
+    "permit": "xxx-123-45u",
+    "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/RK8NNL-WIqGOMpP4t3-1VA/o.jpg",
+    "photos": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/P-30j0dMNlSWjRVzgSTfQw/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/52idojtnUsGfsp-kpqocAw/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/s_yMwZdr94p_AP5h8gR7yw/o.jpg"
+    ],
+    "menu": [
+      "https://thefatshallot.com/wp-content/uploads/2021/02/2021foodtruckmenu.jpg"
+    ],
+    "social": {
+      "website": "https://thefatshallot.com/",
+      "instagram": "https://www.instagram.com/thefatshallot/",
+      "facebook": "https://www.facebook.com/thefatshallot/",
+      "yelp": "https://www.yelp.com/biz/the-fat-shallot-chiacago-9"
+    },
+    "coordinates": {
+      "latitude": 40.713560,
+      "longitude": -74.011630
+    },
+    "location": {
+      "city": "New York",
+      "country": "US",
+      "address": "245 Greenwich st.",
+      "state": "NY",
+      "zip_code": "10007"
+    },
+    "rating": 4.5,
+    "review_count": 400,
+    "price": "$$",
+    "categories": [
+      "Sandwhich"
+    ],
+    "email": "info@thefatshallot.com",
+    "phone": "+17738930826"
+  },
+  {
+    "id": "cartname_permit3",
+    "cart_name": "Royal Grill Halal Food",
+    "owner_name": "Mr. Halal King",
+    "permit": "xxx-wuk-45u",
+    "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/JWQB0HgZgZIYShztf5LdDA/o.jpg",
+    "photos": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/4YLqIzkdTY8oXZk2Mvs0eQ/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/uihxF79sfhY9z2zkPSNZEw/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/l5sMBPBuBEny7bueeW9Z0Q/o.jpg"
+    ],
+    "menu": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/GSl4Flw3qIwX3DWHF1F6Kg/o.jpg"
+    ],
+    "social": {
+      "website": "https://www.royalgrillhalalfood.com/",
+      "instagram": "",
+      "facebook": "",
+      "yelp": "https://www.yelp.com/biz/royal-grill-halal-food-new-york-2?osq=food+carts"
+    },
+    "coordinates": {
+      "latitude": 40.756070,
+      "longitude": -73.983920
+    },
+    "location": {
+      "city": "New York",
+      "country": "US",
+      "address": "1133 6th Ave",
+      "state": "NY",
+      "zip_code": "10036"
+    },
+    "rating": 3.6,
+    "review_count": 680,
+    "price": "$",
+    "categories": [
+      "Indian",
+      "Halal"
+    ],
+    "email": "theroyalgrill@hotmail.com",
+    "phone": "+13477240504"
+  },
+  {
+    "id": "cartname_permit4",
+    "cart_name": "Galbi Q",
+    "owner_name": "Best Korean",
+    "permit": "yyy-hik-273",
+    "image_url": "https://s3-media0.fl.yelpcdn.com/bphoto/kp_9m4VwUNBUkjhsqBa3vQ/o.jpg",
+    "photos": [
+      "https://s3-media0.fl.yelpcdn.com/bphoto/aIX0RMXvvohMT4XfZNaabg/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/KdBykWJggotI2PMjJkJB9g/o.jpg",
+      "https://s3-media0.fl.yelpcdn.com/bphoto/P5SGq-C9D4zCpvkfOVNeGw/o.jpg"
+    ],
+    "menu": [
+      "https://img.restaurantguru.com/r685-food-Galbi-Q.jpg"
+    ],
+    "social": {
+      "website": "https://restaurantguru.com/GalbiQ-New-York",
+      "instagram": "",
+      "facebook": "",
+      "yelp": "https://www.yelp.com/biz/galbi-q-new-york?osq=korean+food+cart"
+    },
+    "coordinates": {
+      "latitude": 40.761150,
+      "longitude": -73.979530
+    },
+    "location": {
+      "city": "New York",
+      "country": "US",
+      "address": "W 52nd St &, 6th Ave",
+      "state": "NY",
+      "zip_code": "10019"
+    },
+    "rating": 5,
+    "review_count": 520,
+    "price": "$$",
+    "categories": [
+      "Korean"
+    ],
+    "email": "galbiq@hotmail.com",
+    "phone": ""
+  }
+]

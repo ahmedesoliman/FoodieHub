@@ -5,6 +5,7 @@ import Dishes from '../components/CartDetail/Dishes';
 import Menu from '../components/CartDetail/Menu';
 import Location from '../components/CartDetail/Location';
 import Info from '../components/CartDetail/Info';
+import Social from '../components/CartDetail/Social';
 
 const DetailScreen = ({ navigation }) => {
 
@@ -20,6 +21,7 @@ const DetailScreen = ({ navigation }) => {
             <Menu result={result} subtitleStyle={styles.subtitle} />
             <Location result={result} subtitleStyle={styles.subtitle} />
             <Info result={result} subtitleStyle={styles.subtitle} />
+            <Social result={result} subtitleStyle={styles.subtitle} />
 
         </ScrollView>
     )

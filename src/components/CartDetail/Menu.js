@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, FlatList, ScrollView } from 'react-native';
-import { Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 const Menu = ({ result, subtitleStyle }) => {
 

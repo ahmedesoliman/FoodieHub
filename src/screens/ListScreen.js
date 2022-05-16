@@ -40,12 +40,12 @@ const ListScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     background: {
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
         height: 3000,
         flex: 1
     },
     flatList: {
-        marginTop: 0
+        marginTop: 0,
     }
 });
 

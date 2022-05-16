@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 const ResultDetail = ({ result }) => {
     return (
@@ -16,21 +17,25 @@ const ResultDetail = ({ result }) => {
 const styles = StyleSheet.create({
 
     container: {
-        marginBottom: 15,
-        alignSelf: 'center'
+        marginBottom: 7,
+        padding: 10,
+        width: Dimensions.get("window").width,
+        alignSelf: 'center',
+        backgroundColor: 'white',
     },
     image: {
-        width: 320,
+        width: Dimensions.get("window").width * 0.92,
         height: 150,
-        borderRadius: 4,
-        marginBottom: 5
+        marginBottom: 5,
+        alignSelf: 'center'
     },
     name: {
         fontWeight: 'bold',
         fontSize: 14
     },
     subtitle: {
-        width: 320
+        width: Dimensions.get("window").width * 0.92,
+        alignSelf: 'center',
     }
 });
 

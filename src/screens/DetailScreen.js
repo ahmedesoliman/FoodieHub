@@ -22,7 +22,6 @@ const DetailScreen = ({ navigation }) => {
             <Location result={result} subtitleStyle={styles.subtitle} />
             <Info result={result} subtitleStyle={styles.subtitle} />
             <Social result={result} subtitleStyle={styles.subtitle} />
-
         </ScrollView>
     )
 };

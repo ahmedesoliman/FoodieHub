@@ -4,38 +4,66 @@ import { Dimensions } from 'react-native';
 
 const Social = ({ result, subtitleStyle }) => {
 
+    // an object to store the detailed content for the cart social section
+    const socials = {
+        website: {
+            text: result.social.website,
+            logo: require("../../../assets/images/Website.png")
+        },
+        facebook: {
+            text: result.social.facebook,
+            logo: require("../../../assets/images/Facebook.png")
+        },
+        instagram: {
+            text: result.social.instagram,
+            logo: require("../../../assets/images/Instagram.png")
+        },
+        yelp: {
+            text: result.social.yelp,
+            logo: require("../../../assets/images/Yelp.png")
+        }
+    }
+
+    // dynamically render the social section
     return (
-        <View>
+        noInfo(socials) ? null : <>
             <Text style={subtitleStyle}>Social</Text>
             <View style={styles.container}>
-
-                <TouchableOpacity onPress={() => Linking.openURL(result.social.website)}>
-                    <Image style={styles.iconStyle} source={require("../../../assets/images/Website.png")} />
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => Linking.openURL(result.social.facebook)}>
-                    <Image style={styles.iconStyle} source={require("../../../assets/images/Facebook.png")} />
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => Linking.openURL(result.social.instagram)}>
-                    <Image style={styles.iconStyle} source={require("../../../assets/images/Instagram.png")} />
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => Linking.openURL(result.social.yelp)}>
-                    <Image style={styles.iconStyle} source={require("../../../assets/images/Yelp.png")} />
-                </TouchableOpacity>
-
+                {Object.keys(socials).map(type => {
+                    const text = socials[type].text;  // text content of a type of social
+                    const logo = socials[type].logo;  // logo of a type of info
+                    return (
+                        (text === "") ? null : <TouchableOpacity key={type} onPress={() => Linking.openURL(text)}>
+                            <Image style={styles.iconStyle} source={logo} />
+                        </TouchableOpacity>
+                    )
+                })}
             </View>
-        </View >
+        </>
     )
 };
+
+/* @Brief: function check if the text var of all records of sub-obj in an obj are empty, aka ""
+ * @Output: true if the they are all empty . Otherwise false
+ */
+function noInfo(obj) {
+    let judge = true;
+    for (const key of Object.keys(obj)) {
+        if (obj[key].text != "") {
+            judge = false;
+            break;
+        }
+    }
+    return judge
+}
 
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
         paddingVertical: Dimensions.get("window").width * 0.04,
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'flex-start',
+        paddingHorizontal: 10
     },
     iconStyle: {
         width: 40,

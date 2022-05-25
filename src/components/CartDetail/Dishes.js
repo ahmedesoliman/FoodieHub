@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet, FlatList, ScrollView } from 'react-nativ
 const Dishes = ({ result, subtitleStyle }) => {
 
     return (
-        <View>
+        result.photos.length === 0 ? null : <>
             <Text style={subtitleStyle}>Popular Dishes</Text>
             <View style={styles.container}>
                 <FlatList
@@ -18,7 +18,7 @@ const Dishes = ({ result, subtitleStyle }) => {
                     }}
                 />
             </View>
-        </View>
+        </>
     )
 };
 

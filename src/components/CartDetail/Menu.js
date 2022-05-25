@@ -2,20 +2,14 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 const Menu = ({ result, subtitleStyle }) => {
-
-    if (result.menu.length != 0) {
-        return (
-            <View>
-                <Text style={subtitleStyle}>Menu</Text>
-                <View style={styles.container}>
-                    <Image style={styles.menuImage} source={{ uri: result.menu[0] }} />
-                </View>
+    return (
+        result.menu.length === 0 ? null : <View>
+            <Text style={subtitleStyle}>Menu</Text>
+            <View style={styles.container}>
+                <Image style={styles.menuImage} source={{ uri: result.menu[0] }} />
             </View>
-        )
-    }
-    else {
-        return null
-    }
+        </View>
+    )
 };
 
 const styles = StyleSheet.create({

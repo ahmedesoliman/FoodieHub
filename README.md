@@ -8,6 +8,8 @@ In addition, FoodieHub offers a user-friendly interface that allows foodies to c
 
 With FoodieHub, the food truck experience in NYC is taken to the next level, providing a centralized platform for foodies and vendors to connect and share their love of food.
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=sDzQ5awNoik&ab "Video Title")
+
 # This is a react-native app:
 
 - Allows food tuckowner to register their trucks with their valid permits.
@@ -22,6 +24,8 @@ With FoodieHub, the food truck experience in NYC is taken to the next level, pro
 - dev: development branch; will have "stable" code that has latest featuers; best branch for developers to branch from
 - testing: will have code attempting to be merged into main project; will often have broken code unit merg fixed, at which point testiung is merged into dev
 - feature/bugfix: will likely have code from single developer focusing on specific/bugfix; used by developer to check-in own code ofter without risk.
+
+## App Diagram
 
 <img src= "https://github.com/ahmedesoliman/FoodieHub/blob/master/repo/AppDiagram.png" width=auto height= auto>
 

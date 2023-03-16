@@ -23,6 +23,8 @@ With FoodieHub, the food truck experience in NYC is taken to the next level, pro
 - testing: will have code attempting to be merged into main project; will often have broken code unit merg fixed, at which point testiung is merged into dev
 - feature/bugfix: will likely have code from single developer focusing on specific/bugfix; used by developer to check-in own code ofter without risk.
 
+<img src= "https://github.com/ahmedesoliman/FoodieHub/blob/master/repo/AppDiagram.png" width=auto height= auto>
+
 ## To Run the Project From "Master" Branch
 
 **Download**
